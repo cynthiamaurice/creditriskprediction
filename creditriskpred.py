@@ -5,14 +5,14 @@ import pandas as pd
 import bz2
 
 st.title("Credit Risk Prediction")
-img = Image.open(r"C:\Users\personal\Desktop\data_prediction_model\logo.webp")
+img = Image.open(r"logo.webp")
 
 #load the model
 def decompress_pickle(data_prediction_model):
     with bz2.BZ2File(data_prediction_model, 'rb') as f:
         data = pickle.load(f)
     return data
-model = decompress_pickle(r"C:\Users\personal\Desktop\data_prediction_model.pbz2")
+model = decompress_pickle(r"data_prediction_model.pbz2")
 st.image(img, width=400)
 
 # User input form
